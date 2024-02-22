@@ -19,6 +19,8 @@ vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 vim.keymap.set('n', '<Tab>', '>>')
 vim.keymap.set('n', '<S-Tab>', '<<')
+vim.keymap.set('v', '<Tab>', '>')
+vim.keymap.set('v', '<S-Tab>', '<')
 
 -- Resize with arrows
 -- delta: 2 lines
