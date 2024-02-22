@@ -1,7 +1,14 @@
 -- Hint: use `:h <option>` to figure out the meaning if needed
 vim.opt.clipboard = 'unnamedplus'   -- use system clipboard 
-vim.opt.completeopt = {'menu', 'menuone', 'noselect'}
+vim.opt.completeopt = {'menu', 'menuone'}
 vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
+vim.opt.diffopt:append("linematch:100")               -- enable more accurate diff
+vim.opt.scrolloff = 5
+vim.opt.shell = 'zsh'
+vim.opt.sidescrolloff = 5
+vim.opt.undofile = true
+vim.opt.virtualedit = 'block'
+vim.opt.wildmode = 'longest:full,full'
 
 -- Tab
 vim.opt.tabstop = 4                 -- number of visual spaces per TAB
