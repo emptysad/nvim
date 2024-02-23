@@ -21,6 +21,7 @@ vim.keymap.set('n', '<Tab>', '>>')
 vim.keymap.set('n', '<S-Tab>', '<<')
 vim.keymap.set('v', '<Tab>', '>')
 vim.keymap.set('v', '<S-Tab>', '<')
+vim.keymap.set('n', '<leader>q', '<cmd>q<CR>')
 
 -- Resize with arrows
 -- delta: 2 lines
@@ -43,9 +44,16 @@ vim.keymap.set('v', '>', '>gv', opts)
 
 vim.keymap.set('i', 'jj', '<esc>', opts)
 
---Neo-tree
-vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>')
+--Nvim-tree
+vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeFocus<CR>')
 vim.keymap.set('n', '<leader>ef', '<cmd>NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<leader>ec', '<cmd>NvimTreeCollapse<CR>')
 vim.keymap.set('n', '<leader>er', '<cmd>NvimTreeRefresh<CR>')
 
+--Telescope
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope find_files<CR>', {})
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', {})
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<CR><Esc>', {})
+vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', {})
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope oldfiles<CR><Esc>', {})
+vim.keymap.set('n', '<leader>fs', '<cmd>Telescope grep_string<CR><Esc>', {})
