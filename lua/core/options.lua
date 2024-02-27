@@ -1,5 +1,5 @@
 -- Hint: use `:h <option>` to figure out the meaning if needed
-vim.opt.clipboard = 'unnamedplus'   -- use system clipboard 
+-- vim.opt.clipboard = 'unnamedplus'   -- use system clipboard 
 vim.opt.completeopt = {'menu', 'menuone'}
 vim.opt.mouse = 'a'                 -- allow the mouse to be used in Nvim
 vim.opt.diffopt:append("linematch:100")               -- enable more accurate diff
@@ -25,7 +25,7 @@ vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 vim.opt.showmode = false            -- we are experienced, wo don't need the "-- INSERT --" mode hint
-vim.cmd([[:set fillchars+=vert:▕]])
+vim.cmd([[:set fillchars+=vert:▏]]) --▏│▕
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
