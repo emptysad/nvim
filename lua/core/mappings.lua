@@ -22,6 +22,14 @@ vim.keymap.set('n', '<S-Tab>', '<<')
 vim.keymap.set('v', '<Tab>', '>')
 vim.keymap.set('v', '<S-Tab>', '<')
 vim.keymap.set('n', '<leader>q', '<cmd>q<CR>')
+vim.keymap.set('n', 'd', '"_d')
+vim.keymap.set('n', 'x', '"_x')
+vim.keymap.set('n', 'D', '"_D')
+vim.keymap.set('v', 'd', '"_d')
+vim.keymap.set('n', 'y', '"+y')
+vim.keymap.set('n', '<leader>d', '"+d')
+vim.keymap.set('n', '<leader>D', '"+D')
+vim.keymap.set('v', '<leader>d', '"+d')
 
 -- Resize with arrows
 -- delta: 2 lines
@@ -45,7 +53,7 @@ vim.keymap.set('v', '>', '>gv', opts)
 vim.keymap.set('i', 'jj', '<esc>', opts)
 
 --Nvim-tree
-vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeFocus<CR>')
+vim.keymap.set('n', '<leader>ee', '<cmd>NvimTreeToggle<CR>')
 vim.keymap.set('n', '<leader>ef', '<cmd>NvimTreeFindFileToggle<CR>')
 vim.keymap.set('n', '<leader>ec', '<cmd>NvimTreeCollapse<CR>')
 vim.keymap.set('n', '<leader>er', '<cmd>NvimTreeRefresh<CR>')
