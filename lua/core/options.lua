@@ -9,7 +9,7 @@ vim.opt.sidescrolloff = 5
 vim.opt.undofile = true
 vim.opt.virtualedit = 'block'
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.statuscolumn = '%=%{v:relnum?v:relnum:v:lnum} '
+vim.opt.statuscolumn = '%s%=%{v:relnum?v:relnum:v:lnum} '
 vim.opt.numberwidth = 4
 
 -- Tab
