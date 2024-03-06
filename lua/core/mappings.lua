@@ -30,6 +30,7 @@ vim.keymap.set('n', 'y', '"+y')
 vim.keymap.set('n', '<leader>d', '"+d')
 vim.keymap.set('n', '<leader>D', '"+D')
 vim.keymap.set('v', '<leader>d', '"+d')
+vim.keymap.set('n', '<Home>', ':Alpha<CR>', opts)
 
 -- Resize with arrows
 -- delta: 2 lines
