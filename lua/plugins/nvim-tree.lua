@@ -331,6 +331,5 @@ return {
                 },
             },
         } -- END_DEFAULT_OPTS
-        vim.cmd[[NvimTreeToggle]]
     end,
 }
