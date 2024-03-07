@@ -13,8 +13,8 @@ vim.opt.statuscolumn = '%s%=%{v:relnum?v:relnum:v:lnum} '
 vim.opt.numberwidth = 4
 
 -- Tab
-vim.opt.tabstop = 4                 -- number of visual spaces per TAB
-vim.opt.shiftwidth = 4              -- insert 4 spaces on a tab
+vim.opt.tabstop = 2                 -- number of visual spaces per TAB
+vim.opt.shiftwidth = 2              -- insert 4 spaces on a tab
 vim.opt.smarttab = true
 vim.opt.expandtab = true            -- tabs are spaces, mainly because of python
 vim.opt.smartindent = true
