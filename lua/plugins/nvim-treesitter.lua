@@ -1,11 +1,12 @@
-return {"nvim-treesitter/nvim-treesitter"}
-
-
---require'nvim-treesitter.configs'.setup {
---  ensure_installed = { "python", "lua", "vim", "javascript", "go", "html", "css" },
---  sync_install = false,
---  auto_install = true,
---  highlight = {
---	  enable = true,
---  }
---}
+return {
+  "nvim-treesitter/nvim-treesitter",
+  -- config = function ()
+  --   require'nvim-treesitter.configs'.setup {
+  --     auto_install = true,
+  --     highlight = {
+  --       enable = true,
+  --     },
+  --     indent = {enable = true},
+  --   }
+  -- end
+}
