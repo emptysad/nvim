@@ -12,13 +12,6 @@ local coolLines = {
     [[                                        ░░░░░                 ░░░░░░                                            ]],
     [[                                                                                                                ]],
     [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
-    [[                                                                                                                ]],
 }
 
 local function lineColor(lines, popStart, popEnd)
