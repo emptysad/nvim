@@ -39,8 +39,9 @@ return {
             --- function will be called with a Highlights and ColorScheme table
             ---@param highlights Highlights
             ---@param colors ColorScheme
-            on_highlights = function(highlights, colors) 
+            on_highlights = function(highlights, colors)
                 highlights.CursorLineNr = { fg = colors.yellow}
+                highlights.CursorLine = { bg = colors.bg_dark }
                 highlights.NvimTreeWinSeparator = { fg = colors.border, bg = colors.bg}
             end,
         })
