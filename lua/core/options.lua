@@ -36,5 +36,11 @@ vim.opt.ignorecase = true           -- ignore case in searches by default
 vim.opt.smartcase = true            -- but make it case sensitive if an uppercase is entered
 
 vim.opt.listchars = {
-    space = '.'
+  eol = '$',
+  space = '.',
+  nbsp = '⦸',
+  tab = '>-',
+  trail = '~',
+  extends = '»',
+  precedes = '«',
 }

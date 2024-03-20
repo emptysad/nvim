@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>c', ':CccPick<CR>', {})
+
 return {
   "uga-rosa/ccc.nvim",
   config = function ()
