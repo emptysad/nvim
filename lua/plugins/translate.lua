@@ -106,7 +106,7 @@ return {
 						}
 					end,
 					input = "input",
-					output = { "notify", "clipboard" },
+					output = {  "float_win", "clipboard" },
 				},
 				{
 					cmd = "TransToRUinN",
@@ -122,7 +122,7 @@ return {
 						}
 					end,
 					input = "input",
-					output = { "notify", "clipboard" },
+					output = { "float_win", "clipboard" },
 				},
 			},
 		})
