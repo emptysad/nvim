@@ -8,6 +8,7 @@ return {
 			{ "rafamadriz/friendly-snippets" },
 			{ "hrsh7th/cmp-buffer" },
 			{ "hrsh7th/cmp-nvim-lua" },
+      { "hrsh7th/cmp-path" },
 			{ "amarakon/nvim-cmp-fonts" },
 		},
 		config = function()
@@ -72,6 +73,7 @@ return {
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "buffer" },
 					{ name = "fonts" },
+          { name = "path" },
 				}),
 				formatting = {
 					format = function(entry, vim_item)
@@ -80,6 +82,7 @@ return {
 							nvim_lsp = "[LSP]",
 							luasnip = "[LuaSnip]",
 							nvim_lua = "[Lua]",
+              path = "[path]"
 						})[entry.source.name]
 						return vim_item
 					end,
