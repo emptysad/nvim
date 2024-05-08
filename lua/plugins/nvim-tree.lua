@@ -1,8 +1,9 @@
 --mappings
-vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", {})
+vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeFocus<CR>", {})
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", {})
 vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", {})
 vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", {})
+vim.keymap.set("n", "<leader>ex", "<cmd>NvimTreeToggle<CR>", {})
 
 return {
 	"nvim-tree/nvim-tree.lua",
@@ -26,8 +27,8 @@ return {
 			vim.keymap.set("n", "<C-k>", api.node.show_info_popup, opts("Info"))
 			vim.keymap.set("n", "<C-r>", api.fs.rename_sub, opts("Rename: Omit Filename"))
 			vim.keymap.set("n", "<C-t>", api.node.open.tab, opts("Open: New Tab"))
-			vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts("Open: Vertical Split"))
-			vim.keymap.set("n", "<C-x>", api.node.open.horizontal, opts("Open: Horizontal Split"))
+			vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
+			vim.keymap.set("n", "_", api.node.open.horizontal, opts("Open: Horizontal Split"))
 			vim.keymap.set("n", "<BS>", api.node.navigate.parent_close, opts("Close Directory"))
 			vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Open"))
 			vim.keymap.set("n", "<Tab>", api.node.open.preview, opts("Open Preview"))
