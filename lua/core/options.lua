@@ -9,7 +9,7 @@ vim.opt.sidescrolloff = 5
 vim.opt.undofile = true
 vim.opt.virtualedit = 'block'
 vim.opt.wildmode = 'longest:full,full'
-vim.opt.statuscolumn = '%s%C%=%{v:relnum?v:relnum:v:lnum} '
+vim.opt.statuscolumn = '%s%C%=%{&nu? (&rnu && v:relnum?v:relnum:v:lnum):""} '
 vim.opt.foldcolumn = "auto"
 vim.opt.numberwidth = 4
 
@@ -28,7 +28,8 @@ vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 vim.opt.showmode = false            -- we are experienced, wo don't need the "-- INSERT --" mode hint
-vim.cmd([[:set fillchars+=vert:▏]]) --▏│▕
+vim.cmd([[:set fillchars+=vert:│]]) --▏│▕
+vim.opt.fillchars:append('eob: ')
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
