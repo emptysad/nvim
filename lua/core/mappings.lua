@@ -26,6 +26,7 @@ vim.keymap.set('n', '<leader>d', '"+d', opts)
 vim.keymap.set('n', '<leader>D', '"+D', opts)
 vim.keymap.set('v', '<leader>d', '"+d', opts)
 vim.keymap.set('v', '<leader>p', '"+p', opts)
+vim.keymap.set('n', '<leader>w', ':w<CR>', opts)
 -- Resize with arrows
 -- delta: 2 lines
 vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
