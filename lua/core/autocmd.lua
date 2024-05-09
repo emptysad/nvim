@@ -24,6 +24,7 @@ augroup("AutoStartNvimTree", function(group)
     callback = function()
       if vim.bo.filetype ~= "gitcommit" then
         vim.cmd([[NvimTreeToggle]])
+        vim.wo.statuscolumn = ""
         vim.cmd([[wincmd l]])
       end
     end,
