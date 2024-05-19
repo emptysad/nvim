@@ -19,13 +19,17 @@ end
 -- end)
 
 augroup("AutoStartNvimTree", function(group)
-  autocmd("VimEnter", {
+  autocmd({ "VimEnter", "TabNewEntered" }, {
     group = group,
     callback = function()
       if vim.bo.filetype ~= "gitcommit" then
-        vim.cmd([[NvimTreeToggle]])
+        vim.cmd([[NvimTreeOpen]])
         vim.wo.statuscolumn = ""
+        vim.cmd([[:setlocal fillchars+=vert:╎]]) --▏│▕
         vim.cmd([[wincmd l]])
+        if vim.bo.filetype == "alpha" then
+          vim.cmd([[:AlphaRedraw]])
+        end
       end
     end,
   })
@@ -37,7 +41,7 @@ augroup("NvimTreeStatusColumn", function(group)
     callback = function()
       if vim.bo.filetype == "NvimTree" then
         vim.wo.statuscolumn = ""
-        vim.cmd([[:setlocal fillchars+=vert:░]]) --▏│▕
+        vim.cmd([[:setlocal fillchars+=vert:╎]]) --▏│▕
       end
     end,
   })
