@@ -28,8 +28,15 @@ vim.opt.splitbelow = true           -- open new vertical split bottom
 vim.opt.splitright = true           -- open new horizontal splits right
 vim.opt.termguicolors = true        -- enable 24-bit RGB color in the TUI
 vim.opt.showmode = false            -- we are experienced, wo don't need the "-- INSERT --" mode hint
-vim.cmd([[:set fillchars+=vert:│]]) --▏│▕
+vim.cmd([[:set fillchars+=vert:┊]]) --▏│▕
+vim.cmd([[:set fillchars+=vertright:┊]]) --▏│▕
+vim.cmd([[:set fillchars+=vertleft:┊]]) --▏│▕
+vim.cmd([[:set fillchars+=verthoriz:┊]]) --▏│▕
+vim.cmd([[:set fillchars+=horiz:╌]]) --▏│▕
+vim.cmd([[:set fillchars+=horizup:╌]]) --▏│▕
+vim.cmd([[:set fillchars+=horizdown:╌]]) --▏│▕
 vim.opt.fillchars:append('eob: ')
+vim.opt.showtabline = 0
 
 -- Searching
 vim.opt.incsearch = true            -- search as characters are entered
