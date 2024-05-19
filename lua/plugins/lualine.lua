@@ -6,7 +6,7 @@ return {
       options = {
         icons_enabled = true,
         theme = "tokyonight",
-        component_separators = { left = "|", right = "|" },
+        component_separators = { left = "│", right = "│" },
         section_separators = { left = "▓", right = "▓" },
         disabled_filetypes = {
           statusline = {},
@@ -24,7 +24,7 @@ return {
       sections = {
         lualine_a = { { "mode", separator = { left = " ░▒" }, right_padding = 2 } },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename", "tabs" },
+        lualine_c = { "filename", "tabs", {require('auto-session.lib').current_session_name} },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
         lualine_z = { { "location", separator = { right = "▒░ " }, left_padding = 2 } },
@@ -54,7 +54,7 @@ return {
         lualine_y = {},
         lualine_z = {}
       },
-      extensions = { "nvim-tree", "lazy", "fzf", "mason" },
+      -- extensions = { "nvim-tree", "lazy", "fzf", "mason" },
     })
   end,
 }
