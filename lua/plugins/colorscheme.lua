@@ -73,7 +73,8 @@ return {
       on_highlights = function(highlights, colors)
         highlights.CursorLineNr = { fg = colors.yellow }
         highlights.CursorLine = { bg = colors.bg_dark }
-        highlights.NvimTreeWinSeparator = { fg = colors.border, bg = colors.none}
+        highlights.NvimTreeWinSeparator = { fg = colors.bg, bg = colors.none}
+        highlights.WinSeparator = { fg = "#59472c", bold = false }
       end,
     })
     vim.cmd([[colorscheme tokyonight-moon]])
