@@ -2,6 +2,7 @@
 vim.keymap.set('n', '<leader>ff', '<cmd>FzfLua files<CR>', {})
 vim.keymap.set('n', '<leader>fg', '<cmd>FzfLua grep<CR>', {})
 vim.keymap.set('n', '<leader>fb', '<cmd>FzfLua buffers<CR>', {})
+vim.keymap.set('n', '<leader>ft', '<cmd>FzfLua tabs<CR>', {})
 
 return {
 	"ibhagwan/fzf-lua",
