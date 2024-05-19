@@ -27,15 +27,20 @@ vim.keymap.set('n', '<leader>D', '"+D', opts)
 vim.keymap.set('v', '<leader>d', '"+d', opts)
 vim.keymap.set('v', '<leader>p', '"+p', opts)
 vim.keymap.set('n', '<leader>w', ':w<CR>', opts)
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<CR>', opts)
+vim.keymap.set('n', '<leader>th', '<cmd>tabprevious<CR>', opts)
+vim.keymap.set('n', '<leader>tl', '<cmd>tabNext<CR>', opts)
+vim.keymap.set('n', '<leader>tx', '<cmd>tabclose<CR>', opts)
 -- Resize with arrows
 -- delta: 2 lines
-vim.keymap.set('n', '<C-Up>', ':resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Down>', ':resize +2<CR>', opts)
-vim.keymap.set('n', '<C-Left>', ':vertical resize -2<CR>', opts)
-vim.keymap.set('n', '<C-Right>', ':vertical resize +2<CR>', opts)
+vim.keymap.set('n', '<C-Up>', ':resize -1<CR>', opts)
+vim.keymap.set('n', '<C-Down>', ':resize +1<CR>', opts)
+vim.keymap.set('n', '<C-Left>', ':vertical resize -1<CR>', opts)
+vim.keymap.set('n', '<C-Right>', ':vertical resize +1<CR>', opts)
 
 -- Hint: start visual mode with the same area as the previous area and the same mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 vim.keymap.set('i', 'jj', '<esc>', opts)
+vim.keymap.set('i', 'jk', '<CR>', opts)
