@@ -12,6 +12,12 @@ vim.opt.wildmode = 'longest:full,full'
 vim.opt.statuscolumn = '%s%C%=%{&nu? (&rnu && v:relnum?v:relnum:v:lnum):""} '
 vim.opt.foldcolumn = "auto"
 vim.opt.numberwidth = 4
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevel = 99
+vim.opt.foldlevelstart = 1
+vim.opt.foldenable = false
+vim.opt.foldtext = ""
 
 -- Tab
 vim.opt.tabstop = 2                 -- number of visual spaces per TAB
