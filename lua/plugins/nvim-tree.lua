@@ -21,6 +21,17 @@ return {
 				return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
 			end
 
+			local function open_file()
+				local path = api.tree.get_node_under_cursor().absolute_path
+				local result = os.execute("identify " .. path .. "> /tmp/hello 2> /dev/null")
+        print(result)
+        if result==0 then
+          io.popen("imv " .. path)
+        else
+          api.node.open.edit()
+        end
+			end
+
 			-- default mappings
 			vim.keymap.set("n", "L", api.tree.change_root_to_node, opts("CD"))
 			vim.keymap.set("n", "<C-e>", api.node.open.replace_tree_buffer, opts("Open: In Place"))
@@ -30,8 +41,8 @@ return {
 			vim.keymap.set("n", "v", api.node.open.vertical, opts("Open: Vertical Split"))
 			vim.keymap.set("n", "-", api.node.open.horizontal, opts("Open: Horizontal Split"))
 			vim.keymap.set("n", "h", api.node.navigate.parent_close, opts("Close Directory"))
-			vim.keymap.set("n", "<CR>", api.node.open.edit, opts("Open"))
-			vim.keymap.set("n", "l", api.node.open.edit, opts("Open"))
+			vim.keymap.set("n", "<CR>", open_file, opts("Open"))
+			vim.keymap.set("n", "l", open_file, opts("Open"))
 			vim.keymap.set("n", "<Tab>", api.node.open.preview, opts("Open Preview"))
 			vim.keymap.set("n", ">", api.node.navigate.sibling.next, opts("Next Sibling"))
 			vim.keymap.set("n", "<", api.node.navigate.sibling.prev, opts("Previous Sibling"))
