@@ -10,6 +10,18 @@ return {
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	config = function()
 		-- calling `setup` is optional for customization
-		require("fzf-lua").setup({})
+		require("fzf-lua").setup({
+      previewers = {
+        builtin = {
+          extensions = {
+            ["jpg"] = {"chafa", "{file}"},
+            ["webp"] = {"chafa", "{file}"},
+            ["png"] = {"chafa", "{file}"},
+            ["jpeg"] = {"chafa", "{file}"},
+            ["svg"] = {"chafa", "{file}"}
+          }
+        }
+      }
+    })
 	end,
 }
