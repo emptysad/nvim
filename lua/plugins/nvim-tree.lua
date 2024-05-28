@@ -26,7 +26,7 @@ return {
 				local result = os.execute("identify " .. path .. "> /tmp/hello 2> /dev/null")
         print(result)
         if result==0 then
-          io.popen("imv " .. path)
+          io.popen("imv-dir " .. path)
         else
           api.node.open.edit()
         end
