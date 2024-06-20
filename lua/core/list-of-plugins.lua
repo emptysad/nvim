@@ -24,6 +24,7 @@ return {
   {import = "plugins.translate"},
   {import = "plugins.undotree"},
   {import = "plugins.vim-tmux-navigator"},
+  {import = "plugins.plenary"},
 
 
 
