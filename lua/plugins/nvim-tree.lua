@@ -23,8 +23,10 @@ return {
 
 			local function open_file()
 				local path = api.tree.get_node_under_cursor().absolute_path
-				local result = os.execute("identify " .. path .. "> /tmp/hello 2> /dev/null")
-        print(result)
+				local result = os.execute("identify " .. path .. "> /tmp/identify_info.txt 2> /dev/null")
+        local file = io.open("/tmp/identify_info.txt", "r")
+        print(file:read())
+        file:close()
         if result==0 then
           io.popen("imv-dir " .. path)
         else
