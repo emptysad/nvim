@@ -29,7 +29,8 @@ vim.keymap.set('v', '<leader>p', '"+p', opts)
 vim.keymap.set('n', '<leader>w', ':w<CR>', opts)
 vim.keymap.set('n', '<leader>tn', '<cmd>tabnew<CR>', opts)
 vim.keymap.set('n', '<leader>th', '<cmd>tabprevious<CR>', opts)
-vim.keymap.set('n', '<leader>tl', '<cmd>tabNext<CR>', opts)
+vim.keymap.set('n', '<leader>tl', '<cmd>tabnext<CR>', opts)
+vim.keymap.set('n', '<leader>tt', '<cmd>tabnext<CR>', opts)
 vim.keymap.set('n', '<leader>tx', '<cmd>tabclose<CR>', opts)
 -- Resize with arrows
 -- delta: 2 lines
