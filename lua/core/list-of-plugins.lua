@@ -33,4 +33,5 @@ return {
   {import = "plugins.lsp.mason"},
   {import = "plugins.lsp.none-ls"},
   {import = "plugins.lsp.nvim-lspconfig"},
+  {import = "plugins.lsp.nvim-lint"},
 }
