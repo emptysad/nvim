@@ -20,7 +20,6 @@ return {
   {import = "plugins.nvim-tree"},
   {import = "plugins.nvim-treesitter"},
   {import = "plugins.suda"},
-  {import = "plugins.telescope"},
   {import = "plugins.translate"},
   {import = "plugins.undotree"},
   {import = "plugins.vim-tmux-navigator"},
