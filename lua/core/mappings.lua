@@ -44,4 +44,4 @@ vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 vim.keymap.set('i', 'jj', '<esc>', opts)
-vim.keymap.set('i', 'jk', '<CR>', opts)
+vim.keymap.set('i', '<C-j>', 'j', opts)
