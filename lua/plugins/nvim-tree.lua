@@ -23,11 +23,28 @@ return {
 
 			local function open_file()
 				local path = api.tree.get_node_under_cursor().absolute_path
-				local result = os.execute("identify " .. path .. "> /tmp/identify_info.txt 2> /dev/null")
-        local file = io.open("/tmp/identify_info.txt", "r")
-        print(file:read())
-        file:close()
-        if result==0 then
+        local isImage = false
+        local formats = {
+          "jpg",
+          "jpeg",
+          "png",
+          "gif",
+          "webp",
+          "svg",
+          "psd"
+        }
+        for _, format in ipairs(formats) do
+          if path ~= nil and path:match(format .. "$") then
+            isImage = true
+            path = path:gsub(" ", "\\ ")
+            break
+          end
+        end
+        if isImage then
+          local result = os.execute("identify " .. path .. "> /tmp/identify_info.txt 2> /dev/null")
+          local file = io.open("/tmp/identify_info.txt", "r")
+          print(file:read())
+          file:close()
           io.popen("imv-dir " .. path)
         else
           api.node.open.edit()
