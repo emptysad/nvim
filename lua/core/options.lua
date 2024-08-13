@@ -18,6 +18,8 @@ vim.opt.foldlevel = 99
 vim.opt.foldlevelstart = 1
 vim.opt.foldenable = false
 vim.opt.foldtext = ""
+vim.opt.linebreak = true
+vim.opt.showbreak = ""
 
 -- Tab
 vim.opt.tabstop = 2                 -- number of visual spaces per TAB
