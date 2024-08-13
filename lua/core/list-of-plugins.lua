@@ -14,6 +14,8 @@ return {
   {import = "plugins.gitsigns"},
   {import = "plugins.indent-blankline"},
   {import = "plugins.lualine"},
+  {import = "plugins.markdown-preview"},
+  {import = "plugins.navigator"},
   {import = "plugins.neoscroll"},
   {import = "plugins.smartcolumn"},
   {import = "plugins.nvim-surround"},
@@ -22,8 +24,8 @@ return {
   {import = "plugins.suda"},
   {import = "plugins.translate"},
   {import = "plugins.undotree"},
-  {import = "plugins.vim-tmux-navigator"},
   {import = "plugins.plenary"},
+  {import = "plugins.zen-mode"},
 
 
 
