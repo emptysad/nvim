@@ -1,4 +1,5 @@
 vim.g.mapleader = ' '
+vim.b.TEXTMODE = false
 
 -- define common options
 local opts = {
@@ -6,8 +7,36 @@ local opts = {
     silent = true,       -- do not show message
 }
 
+
+local function textModeToggle()
+  TEXTMODE = not TEXTMODE
+    print("Text Mode:", TEXTMODE)
+  if TEXTMODE then
+    vim.keymap.set('n', 'j', 'gj', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('n', 'k', 'gk', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('v', 'j', 'gj', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('v', 'k', 'gk', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('n', '$', 'g$', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('n', '0', 'g0', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('n', 'l', ' ', {noremap = true, silent = true, buffer = true})
+    vim.keymap.set('n', 'h', '<Backspace>', {noremap = true, silent = true, buffer = true})
+  else
+    vim.keymap.del('n', 'j', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('n', 'k', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('v', 'j', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('v', 'k', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('n', '$', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('n', '0', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('n', 'l', {noremap = true, silent = true, buffer = true})
+    vim.keymap.del('n', 'h', {noremap = true, silent = true, buffer = true})
+  end
+end
+
 -- Hint: see `:h vim.map.set()`
 -- Better window navigation
+
+vim.keymap.set('n', '<leader>tm', textModeToggle, opts)
+
 vim.keymap.set('n', '<C-h>', '<C-w>h', opts)
 vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
@@ -22,6 +51,7 @@ vim.keymap.set('n', 'x', '"_x', opts)
 vim.keymap.set('n', 'D', '"_D', opts)
 vim.keymap.set('v', 'd', '"_d', opts)
 vim.keymap.set('n', '<leader>y', '"+y', opts)
+vim.keymap.set('v', '<leader>y', '"+y', opts)
 
 vim.keymap.set('n', '<leader>d', '"+d', opts)
 vim.keymap.set('n', '<leader>D', '"+D', opts)
@@ -38,8 +68,6 @@ vim.keymap.set('n', '<leader>th', '<cmd>tabprevious<CR>', opts)
 vim.keymap.set('n', '<leader>tl', '<cmd>tabnext<CR>', opts)
 vim.keymap.set('n', '<leader>tt', '<cmd>tabnext<CR>', opts)
 vim.keymap.set('n', '<leader>tq', '<cmd>tabclose<CR>', opts)
-vim.keymap.set('n', '<leader>j', 'gj', opts)
-vim.keymap.set('n', '<leader>k', 'gk', opts)
 
 -- Resize with arrows
 -- delta: 2 lines

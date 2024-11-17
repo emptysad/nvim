@@ -56,7 +56,16 @@ return {
     lspconfig.bashls.setup({
       capabilities = capabilities,
     })
-    lspconfig.tsserver.setup({
+    lspconfig.ts_ls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.jsonls.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.vuels.setup({
+      capabilities = capabilities,
+    })
+    lspconfig.pyright.setup({
       capabilities = capabilities,
     })
 
