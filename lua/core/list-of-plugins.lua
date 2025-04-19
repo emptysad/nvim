@@ -1,6 +1,5 @@
 return {
   {import = "plugins.alpha-nvim"},
-  {import = "plugins.auto-session"},
   {import = "plugins.autoclose"},
   {import = "plugins.autotags"},
   {import = "plugins.ccc"},
@@ -18,11 +17,13 @@ return {
   {import = "plugins.navigator"},
   {import = "plugins.neoscroll"},
   {import = "plugins.smartcolumn"},
+  {import = "plugins.spectre"},
   {import = "plugins.nvim-surround"},
   {import = "plugins.nvim-tree"},
   {import = "plugins.nvim-treesitter"},
+  {import = "plugins.nvimesweeper"},
+  {import = "plugins.persistence"},
   {import = "plugins.suda"},
-  -- {import = "plugins.translate"},
   {import = "plugins.translator"},
   {import = "plugins.undotree"},
   {import = "plugins.plenary"},
@@ -30,10 +31,11 @@ return {
 
 
 
-  {import = "plugins.lsp.complition"},
-  {import = "plugins.lsp.mason-lspconfig"},
-  {import = "plugins.lsp.mason"},
-  {import = "plugins.lsp.none-ls"},
-  {import = "plugins.lsp.nvim-lspconfig"},
-  {import = "plugins.lsp.nvim-lint"},
+  {import = "plugins.lsp.coc"},
+  -- {import = "plugins.lsp.complition"},
+  -- {import = "plugins.lsp.mason-lspconfig"},
+  -- {import = "plugins.lsp.mason"},
+  -- {import = "plugins.lsp.none-ls"},
+  -- {import = "plugins.lsp.nvim-lspconfig"},
+  -- {import = "plugins.lsp.nvim-lint"},
 }

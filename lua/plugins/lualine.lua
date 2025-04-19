@@ -24,7 +24,7 @@ return {
       sections = {
         lualine_a = { { "mode", separator = { left = " ░▒" }, right_padding = 2 } },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = { "filename", "tabs", {require('auto-session.lib').current_session_name} },
+        lualine_c = { "filename", "tabs" },
         lualine_x = { "encoding", "fileformat", "filetype" },
         lualine_y = { "progress" },
         lualine_z = { { "location", separator = { right = "▒░ " }, left_padding = 2 } },

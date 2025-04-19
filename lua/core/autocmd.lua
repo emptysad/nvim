@@ -18,6 +18,24 @@ end
 --   })
 -- end)
 
+augroup("AutoStartNvimTreeUser", function(group)
+  autocmd({ "User" }, {
+    group = group,
+    pattern = { "PersistenceLoadPost" },
+    callback = function()
+      if vim.bo.filetype ~= "gitcommit" then
+        vim.cmd([[NvimTreeOpen]])
+        vim.wo.statuscolumn = ""
+        vim.cmd([[:setlocal fillchars+=vert:╎]]) --▏│▕
+        vim.cmd([[wincmd l]])
+        if vim.bo.filetype == "alpha" then
+          vim.cmd([[:AlphaRedraw]])
+        end
+      end
+    end,
+  })
+end)
+
 augroup("AutoStartNvimTree", function(group)
   autocmd({ "VimEnter", "TabNewEntered" }, {
     group = group,
